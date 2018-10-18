@@ -1,0 +1,28 @@
+{
+    "name": "invalid-impl-pkg",
+    "version": "0.1.0",
+    "description": "an invalid impl pkg for md-file-converter for testing purposes",
+    "author": "marlou <pro@marc-loupias.fr>",
+    "contributors": [
+        {
+            "name": "Marc Loupias",
+            "email": "pro@marc-loupias.fr",
+            "url": "https://github.com/MarcLoupias"
+        }
+    ],
+    "keywords": [
+        "markdown",
+        "converter",
+        "marked"
+    ],
+    "private": true,
+    "license": "ISC",
+    "engines": {
+        "node": ">=10.13.0",
+        "npm": ">=6.4.1"
+    },
+    "main": "dist/index.js",
+    "dependencies": {
+        "marked": "^0.6.0"
+    }
+}

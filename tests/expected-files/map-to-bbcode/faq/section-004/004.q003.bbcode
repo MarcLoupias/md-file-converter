@@ -1,0 +1,21 @@
+[SIZE=1]FAQ Git pour developpez.com[/SIZE]
+
+[SIZE=2]4 Les dépôts distants ([i]remotes[/i])[/SIZE]
+
+[SIZE=3]Comment inspecter un dépôt distant ?[/SIZE]
+
+[code]
+$ git remote show origin
+* distante origin
+  URL de rapatriement : https://github.com/MarcLoupias/dev.com-faq-git.git
+  URL push : https://github.com/MarcLoupias/dev.com-faq-git.git
+  Branche HEAD : master
+  Branche distante :
+    master suivi
+  Branche locale configurée pour 'git pull' :
+    master fusionne avec la distante master
+  Référence locale configurée pour 'git push' :
+    master pousse vers master (à jour)
+[/code]
+Affiche l’état du dépôt distant ([C]fetch[/C] et [C]push[/C]), liste des branches, si elles sont trackées ou non, branches locales configurées pour un [C]pull[/C] et pour un [C]push[/C].
+

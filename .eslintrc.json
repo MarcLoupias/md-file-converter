@@ -1,0 +1,38 @@
+{
+    "env": {
+        "es6": true,
+        "node": true,
+        "mocha": true
+    },
+    "plugins": ["node", "security"],
+    "extends": ["eslint:recommended", "plugin:node/recommended", "plugin:security/recommended"],
+    "rules": {
+        "indent": [
+            "error",
+            4,
+            { "SwitchCase": 1 }
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-console": 0,
+        "node/exports-style": ["error", "module.exports"]
+    },
+    "overrides": [
+        {
+            "files": ["tests/*.spec.js", "tests/testing-impl-pkg/**/*.js"],
+            "rules": {
+                "node/no-unpublished-require": "off"
+            }
+        }
+    ]
+}

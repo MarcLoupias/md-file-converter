@@ -1,0 +1,9 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>004.q001</title></head><body><h1>FAQ Git pour developpez.com</h1>
+<h2>4 Les dépôts distants (<em>remotes</em>)</h2>
+<h3>Comment lister les dépôts distants d’un dépôt ?</h3>
+<pre><code class="undefinedbash">$ git remote -v
+origin https://www.domain.tld/git/repo.git (fetch)
+origin https://www.domain.tld/git/repo.git (push)</code></pre>
+<p>Un dépôt distant (<em>remote</em>) est désigné par deux URL, une URL de <code>fetch</code> (indique où tirer les modifications effectuées par les autres développeurs) et une URL de <code>push</code> (indique où pousser ses propres modifications).</p>
+<p>Certaines organisations adoptent le <code>forking model</code> pour gérer la collaboration dans le projet. Un nouveau développeur clonera le projet depuis le dépôt central, forkera ensuite ce dépôt puis changera l’URL pour pousser sur son fork au lieu du dépôt central. Les modifications du fork vers le dépot central seront effectuées au travers pull/merge request depuis l’outil web présent sur le dépot central (GitHub, GitLab…). Ce modèle a pour avantage de simplifier et de sécuriser fortement la gestion des droits en écriture sur le dépôt central.</p>
+</body></html>

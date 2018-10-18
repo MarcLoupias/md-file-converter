@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><document><QA create_date="2018-11-19" last_update="2018-11-20" name="003.q001"><question>Comment initialiser un dépôt ?</question><author name="marco46"/><keywords>lnk, raccourci, fichier</keywords><answer><code langage="bash" showLines="1"><![CDATA[$ cd /home/user/dev/projet-toto
+$ git init
+Initialized empty Git repository in /home/user/dev/projet-toto/.git/]]></code><paragraph>Initialise un dépôt dans le répertoire courant. Le dépôt est composé du répertoire <inline>.git</inline> contenant les métadonnées du dépôt et le répertoire de travail (<i>working directory</i>).</paragraph></answer></QA></document>

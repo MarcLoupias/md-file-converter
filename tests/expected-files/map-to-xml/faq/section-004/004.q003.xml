@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><document><QA create_date="2018-11-19" last_update="2018-11-20" name="004.q003"><question>Comment inspecter un dépôt distant ?</question><author name="marco46"/><keywords>lnk, raccourci, fichier</keywords><answer><code langage="bash" showLines="1"><![CDATA[$ git remote show origin
+* distante origin
+  URL de rapatriement : https://github.com/MarcLoupias/dev.com-faq-git.git
+  URL push : https://github.com/MarcLoupias/dev.com-faq-git.git
+  Branche HEAD : master
+  Branche distante :
+    master suivi
+  Branche locale configurée pour 'git pull' :
+    master fusionne avec la distante master
+  Référence locale configurée pour 'git push' :
+    master pousse vers master (à jour)]]></code><paragraph>Affiche l’état du dépôt distant (<inline>fetch</inline> et <inline>push</inline>), liste des branches, si elles sont trackées ou non, branches locales configurées pour un <inline>pull</inline> et pour un <inline>push</inline>.</paragraph></answer></QA></document>

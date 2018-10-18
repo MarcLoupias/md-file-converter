@@ -1,0 +1,11 @@
+[SIZE=1]FAQ Git pour developpez.com[/SIZE]
+
+[SIZE=2]3 Initialisation d’un dépôt[/SIZE]
+
+[SIZE=3]Comment initialiser un dépôt nu ([i]bare repository[/i]) ?[/SIZE]
+
+[code]
+git init --bare
+[/code]
+Un dépôt nu ne contient pas de répertoire de travail. On ne peut donc pas travailler avec (créer des commits etc.). Il sert seulement à partager son travail (utilisé comme source pour les autres). Généralement les dépôts sans répertoire de travail ([i]bare repository[/i]) sont créés par des outils web comme GitHub ou GitLab pour centraliser le travail entre développeurs et faciliter la collaboration via diverses fonctionnalités (gestion des issues, des milestones…)
+

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <!-- en-tete de la FAQ -->
+    <editeur>
+        <edversion>Version 2.45</edversion>
+        <edtypexml>0</edtypexml>
+    </editeur>
+    <entete>
+        <rubrique>29</rubrique>
+        <meta>
+            <description>FAQ Git</description>
+            <keywords>faq, SCM, Git</keywords>
+        </meta>
+        <titre>
+            <page>FAQ Git</page>
+            <article>FAQ Git</article>
+        </titre>
+        <date>2018-12-01</date>
+        <miseajour>2018-12-01</miseajour>
+        <google-analytics>UA-6544797-1</google-analytics>
+        <licauteur>Developpez</licauteur>
+        <lictype>4</lictype>
+        <licannee>2018</licannee>
+        <serveur>djibril-http</serveur>
+        <chemin>tutoriels/club/dvp-html5/faq-versionfinale</chemin>
+        <urlhttp>http://djibril.developpez.com/tutoriels/club/dvp-html5/faq-versionfinale/</urlhttp>
+        <pdf>
+            <sautDePageAvantSection>0</sautDePageAvantSection>
+            <notesBasPage>FinDocument</notesBasPage>
+        </pdf>
+        <nomfaq>FAQGIT</nomfaq>
+    </entete>
+    <!-- description des auteurs -->
+    <authorDescriptions><authorDescription name="marco46" role="auteur"><fullname>Marc Loupias</fullname><url>https://www.developpez.net/forums/u70899/marco46/</url></authorDescription><authorDescription name="littlewhite" role="correcteur"><fullname>Little White</fullname><url>https://www.developpez.net/forums/u240267/littlewhite/</url></authorDescription><authorDescription name="mickael-baron" role="correcteur"><fullname>Mickael Baron</fullname><url>https://www.developpez.net/forums/u69211/mickael-baron/</url></authorDescription><authorDescription name="songbird" role="correcteur"><fullname>Songbird</fullname><url>https://www.developpez.net/forums/u897329/songbird/</url></authorDescription></authorDescriptions>
+    <!-- Edito de la FAQ, il faut la placer dans des balises paragraph -->
+    <edito>
+        <paragraph>FAQ Git en français pour developpez.com</paragraph>
+    </edito>
+    <!-- Sommaire de la FAQ -->
+    <!-- licence de reproduction affiché en bas de l'article -->
+    <licence>CC-BY-SA-4.0</licence>
+    <summary><section id="section-001"><title>1 Généralités</title><link href="001.q001"/><link href="001.q002"/><link href="001.q003"/></section><section id="section-002"><title>2 Installation et configuration</title><link href="002.q001"/><link href="002.q002"/><link href="002.q003"/></section><section id="section-003"><title>3 Initialisation d’un dépôt</title><link href="003.q001"/><link href="003.q002"/><link href="003.q003"/></section><section id="section-004"><title>4 Les dépôts distants (<i>remotes</i>)</title><link href="004.q001"/><link href="004.q002"/><link href="004.q003"/></section></summary>
+    <!-- Liste des questions de la FAQ -->
+    <QAs><QA create_date="2018-11-19" last_update="2018-11-20" name="001.q001"><question>Qu’est ce que Git ?</question><author name="marco46"/><keywords>lnk, raccourci, fichier</keywords><answer><paragraph>Git est un système de contrôle de révision décentralisé et rapide.</paragraph><paragraph>Il a été écrit en 2005 à l’initiative de Linus Torvalds pour gérer les sources du kernel Linux.</paragraph></answer></QA><QA create_date="2018-11-19" last_update="2018-11-20" name="001.q002"><question>Que signifie Git ?</question><author name="marco46"/><keywords>lnk, raccourci, fichier</keywords><answer><paragraph>Il n’y a pas de réponses précises, on ne sait pas s’il s’agit d’un acronyme ou d’un mot. Le nom date de la toute première livraison du projet.<br />Le fichier <link href="https://github.com/git/git/blob/master/README.md">README du projet</link> contient quelques explications.<br />En argot britannique il s’agit également d’une insulte.</paragraph></answer></QA><QA create_date="2018-11-19" last_update="2018-11-20" name="001.q003"><question>Où trouver de la documentation pour Git ?</question><author name="marco46"/><keywords>lnk, raccourci, fichier</keywords><answer><paragraph>Le site officiel est disponible à l’adresse <link href="https://git-scm.com/">https://git-scm.com/</link>. La documentation est hébergée <link href="https://git-scm.com/doc">au même endroit</link>.</paragraph></answer></QA><QA create_date="2018-11-19" last_update="2018-11-20" name="002.q001"><question>Comment installer Git sur Windows ?</question><author name="marco46"/><keywords>lnk, raccourci, fichier</keywords><answer><paragraph>Téléchargez le client Git approprié depuis <link href="https://git-scm.com/downloads">la page officielle</link>, lancez l’installeur et suivez les instructions.</paragraph></answer></QA><QA create_date="2018-11-19" last_update="2018-11-20" name="002.q002"><question>Comment installer Git sur macOS ?</question><author name="marco46"/><keywords>lnk, raccourci, fichier</keywords><answer><paragraph>Il existe plusieurs façons d’installer Git sous macOS.</paragraph><liste><element>La première façon consiste à installer XCode qui inclut Git (Apple Git-xy). Depuis un terminal, saisir la ligne de commande =&gt; <inline>xcode-select --install</inline>.</element><element>La deuxième façon consiste à utiliser <link href="https://sourceforge.net/projects/git-osx-installer/">Git-osx-install</link>. Téléchargez le fichier .dmg et lancez l’installation en suivant les instructions.</element><element>La troisième façon consiste à utiliser <link href="https://brew.sh/index_fr">Homebrew</link>. En supposant que <link href="https://brew.sh/index_fr">Homebrew</link> soit installé, depuis un terminal saisir la ligne de commande =&gt; <inline>brew install git</inline>.</element></liste></answer></QA><QA create_date="2018-11-19" last_update="2018-11-20" name="002.q003"><question>Comment installer Git sur Linux ?</question><author name="marco46"/><keywords>lnk, raccourci, fichier</keywords><answer><paragraph>Pour la majorité des distributions, Git sera disponible au travers du gestionnaire de paquets.<br />Par exemple, pour Debian, vous pouvez l’installer ainsi :</paragraph><code langage="bash" showLines="1"><![CDATA[apt-get install git]]></code></answer></QA><QA create_date="2018-11-19" last_update="2018-11-20" name="003.q001"><question>Comment initialiser un dépôt ?</question><author name="marco46"/><keywords>lnk, raccourci, fichier</keywords><answer><code langage="bash" showLines="1"><![CDATA[$ cd /home/user/dev/projet-toto
+$ git init
+Initialized empty Git repository in /home/user/dev/projet-toto/.git/]]></code><paragraph>Initialise un dépôt dans le répertoire courant. Le dépôt est composé du répertoire <inline>.git</inline> contenant les métadonnées du dépôt et le répertoire de travail (<i>working directory</i>).</paragraph></answer></QA><QA create_date="2018-11-19" last_update="2018-11-20" name="003.q002"><question>Comment initialiser un dépôt nu (<i>bare repository</i>) ?</question><author name="marco46"/><keywords>lnk, raccourci, fichier</keywords><answer><code langage="bash" showLines="1"><![CDATA[git init --bare]]></code><paragraph>Un dépôt nu ne contient pas de répertoire de travail. On ne peut donc pas travailler avec (créer des commits etc.). Il sert seulement à partager son travail (utilisé comme source pour les autres). Généralement les dépôts sans répertoire de travail (<i>bare repository</i>) sont créés par des outils web comme GitHub ou GitLab pour centraliser le travail entre développeurs et faciliter la collaboration via diverses fonctionnalités (gestion des issues, des milestones…)</paragraph></answer></QA><QA create_date="2018-11-19" last_update="2018-11-20" name="003.q003"><question>Comment cloner un dépôt ?</question><author name="marco46"/><keywords>lnk, raccourci, fichier</keywords><answer><code langage="bash" showLines="1"><![CDATA[git clone <url>]]></code><paragraph>Où <inline>&lt;url&gt;</inline> est l’url du dépôt Git à cloner.</paragraph></answer></QA><QA create_date="2018-11-19" last_update="2018-11-20" name="004.q001"><question>Comment lister les dépôts distants d’un dépôt ?</question><author name="marco46"/><keywords>lnk, raccourci, fichier</keywords><answer><code langage="bash" showLines="1"><![CDATA[$ git remote -v
+origin https://www.domain.tld/git/repo.git (fetch)
+origin https://www.domain.tld/git/repo.git (push)]]></code><paragraph>Un dépôt distant (<i>remote</i>) est désigné par deux URL, une URL de <inline>fetch</inline> (indique où tirer les modifications effectuées par les autres développeurs) et une URL de <inline>push</inline> (indique où pousser ses propres modifications).</paragraph><paragraph>Certaines organisations adoptent le <inline>forking model</inline> pour gérer la collaboration dans le projet. Un nouveau développeur clonera le projet depuis le dépôt central, forkera ensuite ce dépôt puis changera l’URL pour pousser sur son fork au lieu du dépôt central. Les modifications du fork vers le dépot central seront effectuées au travers pull/merge request depuis l’outil web présent sur le dépot central (GitHub, GitLab…). Ce modèle a pour avantage de simplifier et de sécuriser fortement la gestion des droits en écriture sur le dépôt central.</paragraph></answer></QA><QA create_date="2018-11-19" last_update="2018-11-20" name="004.q002"><question>Comment ajouter un dépôt distant ?</question><author name="marco46"/><keywords>lnk, raccourci, fichier</keywords><answer><code langage="bash" showLines="1"><![CDATA[git remote add <alias> <chemin/url>]]></code><paragraph>Où <inline>&lt;alias&gt;</inline> désigne le nom du dépôt distant (<i>remote</i>).</paragraph></answer></QA><QA create_date="2018-11-19" last_update="2018-11-20" name="004.q003"><question>Comment inspecter un dépôt distant ?</question><author name="marco46"/><keywords>lnk, raccourci, fichier</keywords><answer><code langage="bash" showLines="1"><![CDATA[$ git remote show origin
+* distante origin
+  URL de rapatriement : https://github.com/MarcLoupias/dev.com-faq-git.git
+  URL push : https://github.com/MarcLoupias/dev.com-faq-git.git
+  Branche HEAD : master
+  Branche distante :
+    master suivi
+  Branche locale configurée pour 'git pull' :
+    master fusionne avec la distante master
+  Référence locale configurée pour 'git push' :
+    master pousse vers master (à jour)]]></code><paragraph>Affiche l’état du dépôt distant (<inline>fetch</inline> et <inline>push</inline>), liste des branches, si elles sont trackées ou non, branches locales configurées pour un <inline>pull</inline> et pour un <inline>push</inline>.</paragraph></answer></QA></QAs>
+</document>
