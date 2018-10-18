@@ -1,0 +1,19 @@
+{
+    "name": "dev.com-news-md2bbcode",
+    "version": "0.1.0",
+    "description": "Outil de conversion de fichiers markdown en BBCode adapté au format de news de developpez.com",
+    "author": "marlou <pro@marc-loupias.fr>",
+    "private": true,
+    "license": "ISC",
+    "engines": {
+        "node": ">=6.0.0",
+        "npm": ">=5.2.0"
+    },
+    "main": "index.js",
+    "scripts": {
+        "start": "npx -p node@latest -- node index.js"
+    },
+    "dependencies": {
+        "marked": "^0.5.1"
+    }
+}
