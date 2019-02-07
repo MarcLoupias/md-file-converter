@@ -23,3 +23,5 @@ jobs:
           script:
               - npm install -g semantic-release@^15
               - semantic-release
+
+after_failure: "cat /home/travis/build/MarcLoupias/md-file-converter/npm-debug.log"
