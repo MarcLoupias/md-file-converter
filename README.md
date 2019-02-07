@@ -6,7 +6,7 @@
 
 This project is a CLI tool built on top of [marked](https://github.com/markedjs/marked) to ease his usage.
 
-The CLI tool does nothing alone. It is used in conjunction of an implementation package. No impl package published yet.
+The CLI tool does nothing alone. It is used in conjunction of an implementation package. **No impl package published yet**.
 
 This package details how marked is extended and how the markdown files are processed.
 
