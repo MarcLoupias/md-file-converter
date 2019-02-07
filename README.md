@@ -10,7 +10,7 @@ The CLI tool does nothing alone. It is used in conjunction of an implementation 
 
 This package details how marked is extended and how the markdown files are processed.
 
-In others words, it implements what to do to the markdown files you want to process.
+In others words, it implements what to do with the markdown files you want to process.
 
 ## prerequisites
 
