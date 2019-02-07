@@ -112,7 +112,7 @@ program
 program
     .command('convert <implPkg> <globPattern>')
     .option('-d, --dest <path>', 'Specify an absolute or relative directory destination <path> for the converted file(s). <path> MUST exist.')
-    .option('-f, --filename <filename>', 'When reducing to a single file, specity the filename <filename> (without extension which is defined in the impl pkg) for the converted file. ')
+    .option('-f, --filename <filename>', 'When reducing to a single file, specify the filename <filename> (without extension which is defined in the impl pkg) for the converted file. ')
     .description('Convert the files grabbed by <globPattern> with the <implPkg> implementation package.')
     .action(actionConvert);
 
