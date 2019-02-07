@@ -1,6 +1,6 @@
 {
     "name": "md-file-converter",
-    "version": "0.1.0",
+    "version": "0.0.0-development",
     "description": "A tool to convert markdown files into another format. The format is implemented in another package with a defined contract. Built on top of marked.",
     "author": "marlou <pro@marc-loupias.fr>",
     "contributors": [
@@ -15,7 +15,6 @@
         "converter",
         "marked"
     ],
-    "private": true,
     "license": "ISC",
     "repository": {
         "type": "git",
@@ -41,6 +40,7 @@
         }
     },
     "scripts": {
+        "cz-commit": "git-cz",
         "start": "DEV_MODE=true DEBUG=app:* node -r source-map-support/register dist/index.js convert '../tests/testing-impl-pkg/map-to-bbcode' 'tests/actual-files/news/test-news.md'",
         "lint": "./node_modules/.bin/eslint -c .eslintrc.json tests/*.spec.js",
         "lint-ts": "./node_modules/tslint/bin/tslint -t stylish -c tslint.json src/**/*.ts src/*.ts tests/testing-impl-pkg/**/*.ts",
@@ -57,7 +57,13 @@
         "posttest": "chmod 664 dist/index.js",
         "prebuild": "rimraf bin/",
         "build": "./node_modules/.bin/tsc --pretty && chmod 764 bin/index.js",
-        "postbuild": "NODE_NO_WARNINGS=1 mocha --bail tests/*.spec.js && chmod 664 bin/index.js"
+        "postbuild": "NODE_NO_WARNINGS=1 mocha --bail tests/*.spec.js && chmod 664 bin/index.js",
+        "semantic-release": "semantic-release"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
     },
     "dependencies": {
         "commander": "^2.19.0",
@@ -73,12 +79,15 @@
         "@types/node": "^10.12.0",
         "@types/package-json": "^5.0.0",
         "chai": "^4.2.0",
+        "commitizen": "^3.0.5",
+        "cz-conventional-changelog": "^2.1.0",
         "eslint": "^5.11.1",
         "eslint-plugin-node": "^8.0.0",
         "eslint-plugin-security": "^1.4.0",
         "husky": "^1.3.1",
         "mocha": "^5.2.0",
         "rimraf": "2.6.3",
+        "semantic-release": "^15.13.3",
         "source-map-support": "^0.5.10",
         "tslint": "5.12.1",
         "typescript": "3.3.1"
