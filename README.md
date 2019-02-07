@@ -1,5 +1,9 @@
 # md-file-converter
 
+[![Build Status](https://travis-ci.com/MarcLoupias/md-file-converter.svg?branch=master)](https://travis-ci.com/MarcLoupias/md-file-converter)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+[![npm version](https://badge.fury.io/js/md-file-converter.svg)](http://badge.fury.io/js/md-file-converter)
+
 This project is a CLI tool built on top of [marked](https://github.com/markedjs/marked) to ease his usage.
 
 The CLI tool does nothing alone. It is used in conjunction of an implementation package.
