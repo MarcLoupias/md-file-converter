@@ -22,7 +22,7 @@ jobs:
               - npm run test
         - stage: deploy
           if: branch == master && !fork
-          node_js: 'node' # pre-installed version
+          node_js: '10'
           script:
               - npm install -g semantic-release@^15
               - semantic-release
