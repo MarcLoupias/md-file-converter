@@ -9,7 +9,6 @@ install:
     - npm install
 
 script:
-    - commitlint-travis
     - npm run test
 
 branches:
@@ -18,6 +17,9 @@ branches:
 
 jobs:
     include:
+        - stage: commitlint
+          script:
+              - commitlint-travis
         - stage: test
           script:
               - npm run test
