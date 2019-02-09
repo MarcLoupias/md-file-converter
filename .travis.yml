@@ -8,9 +8,6 @@ cache: npm
 install:
     - npm install
 
-script:
-    - npm run test
-
 branches:
     except:
         - '/^v\d+\.\d+\.\d+$/'
@@ -29,5 +26,3 @@ jobs:
           script:
               - npm install -g semantic-release@^15
               - semantic-release
-
-after_failure: "cat /home/travis/build/MarcLoupias/md-file-converter/npm-debug.log"
