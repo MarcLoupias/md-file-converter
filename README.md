@@ -8,7 +8,7 @@
 
 This project is a CLI tool built on top of [marked](https://github.com/markedjs/marked) to ease his usage.
 
-The CLI tool does nothing alone. It is used in conjunction of an implementation package. **No impl package published yet**.
+The CLI tool does nothing alone. It is used in conjunction of an implementation package.
 
 This package details how marked is extended and how the markdown files are processed.
 
@@ -19,6 +19,22 @@ In others words, it implements what to do with the markdown files you want to pr
 You should read [the marked documentation](https://marked.js.org/#/README.md) and play with it before trying to use this tool to write an implementation package.
 
 An implementation package should give enough details to use it directly without reading this documentation or the marked one.
+
+## existing implementation packages
+
+They are mostly packaged version of `tests/testing-impl-pkg/`, but they will probably diverge a lot in the future.
+
+### simple markdown to html map
+
+A very basic one is [mdfc-map-to-html](https://www.npmjs.com/package/mdfc-map-to-html). Just turns your markdown into html files.
+
+### others examples
+
+Others exists for a [developpez.com](https://www.developpez.com/) internal project that you could find useful as examples :
+
+- [dvlp-news-bbcode](https://www.npmjs.com/package/dvlp-news-bbcode) map to `.bbcode` files
+- [dvlp-faq-md-summary](https://www.npmjs.com/package/dvlp-faq-md-summary) reduce markdown files to a single `SUMMARY.md` file (a FAQ index).
+- [dvlp-faq-xml](https://www.npmjs.com/package/dvlp-faq-xml) reduce markdown files to a single xml file. The last package must be used first in the hosting project to generate the FAQ summary.
 
 ## uses cases
 
