@@ -45,6 +45,9 @@ class CliLogger {
     logErrorNoImplForTheGivenImplPkgPath(implPkgPath) {
         this.console.error(`No implementation package found for the given path ${implPkgPath}.`);
     }
+    logErrorNoMarkedOptionsFileForTheGivenPath(markedOptionsPath) {
+        this.console.error(`No marked options file found for the given path ${markedOptionsPath}.`);
+    }
     logErrorFulfilledGlobPatternMustCatchMdFilesOnly(globPattern) {
         this.console.error(`The fulfilled pattern must catch .md files only : ${globPattern}.`);
     }

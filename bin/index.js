@@ -17,6 +17,7 @@ const cli_logger_1 = require("./io/cli-logger");
 const files_helper_1 = require("./io/files-helper");
 const interpret_glob_1 = require("./io/interpret-glob");
 const load_impl_pkg_1 = require("./io/load-impl-pkg");
+const load_marked_options_1 = require("./io/load-marked-options");
 const default_impl_1 = require("./model/documents/default-impl");
 exports.DocumentPaths = default_impl_1.DocumentPaths;
 exports.MdDocument = default_impl_1.MdDocument;
@@ -29,12 +30,13 @@ const cliLogger = cli_logger_1.CliLogger.makeCliLogger({ pkg, console });
 const filesHelper = files_helper_1.FilesHelper.makeFilesHelper({ process, debug, promises: fs_1.promises });
 const interpretGlob = interpret_glob_1.makeInterpretGlob({ globSync: glob_1.sync, cliLogger, process });
 const loadImplPkg = load_impl_pkg_1.makeLoadImplPkg({ process, require, cliLogger });
+const loadMarkedOptions = load_marked_options_1.makeLoadMarkedOptions({ process, require, cliLogger });
 const unConfiguredReadMdDocument = default_impl_2.makeUnConfiguredReadMdDocument({ debug, path, fm, filesHelper });
 const unConfiguredTokenizeMdDocument = default_impl_2.makeUnConfiguredTokenizeMdDocument({ marked });
 const unConfiguredMapParsedDocument = default_impl_2.makeUnConfiguredMapParsedDocument({ marked });
 const writeTargetDocument = default_impl_2.makeWriteTargetDocument({ filesHelper, cliLogger });
 const actionConvert = action_convert_1.makeActionConvert({
-    interpretGlob, debug, path, cliLogger, loadImplPkg,
+    interpretGlob, debug, path, cliLogger, loadImplPkg, loadMarkedOptions,
     unConfiguredReadMdDocument,
     defaultImpl: {
         unConfiguredTokenizeMdDocument,
@@ -49,6 +51,7 @@ program
     .command('convert <implPkg> <globPattern>')
     .option('-d, --dest <path>', 'Specify an absolute or relative directory destination <path> for the converted file(s). <path> MUST exist.')
     .option('-f, --filename <filename>', 'When reducing to a single file, specify the filename <filename> (without extension which is defined in the impl pkg) for the converted file. ')
+    .option('-o, --overwrite-marked-options <markedOptionsFilePath>', 'Marked options set in the <markedOptionsFilePath> file overwrite the default options defined in the implementation package in use.')
     .description('Convert the files grabbed by <globPattern> with the <implPkg> implementation package.')
     .action(actionConvert);
 program.parse(process.argv);
