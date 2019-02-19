@@ -15,6 +15,7 @@ export interface ICliLogger {
     logProcessedFile(dest: string): void;
     logAfterProcessingFiles(): void;
     logErrorNoImplForTheGivenImplPkgPath(implPkgPath: string): void;
+    logErrorNoMarkedOptionsFileForTheGivenPath(markedOptionsPath: string): void;
     logErrorFulfilledGlobPatternMustCatchMdFilesOnly(globPattern: string): void;
     logErrorNoFilesForFulfilledGlobPattern(globPattern: string): void;
     logErrorDuringActionFunction(e: Error): void;
@@ -78,6 +79,10 @@ export class CliLogger implements ICliLogger {
 
     public logErrorNoImplForTheGivenImplPkgPath(implPkgPath: string): void {
         this.console.error(`No implementation package found for the given path ${implPkgPath}.`);
+    }
+
+    public logErrorNoMarkedOptionsFileForTheGivenPath(markedOptionsPath: string): void {
+        this.console.error(`No marked options file found for the given path ${markedOptionsPath}.`);
     }
 
     public logErrorFulfilledGlobPatternMustCatchMdFilesOnly(globPattern: string): void {

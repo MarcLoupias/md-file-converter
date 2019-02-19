@@ -16,6 +16,11 @@ function makeActionConvert(deps) {
                 deps.debug('--filename option set with value : %s', options.filename);
                 filenameOption = options.filename;
             }
+            let markedOptionsFilePath = '';
+            if (options.overwriteMarkedOptions) {
+                deps.debug('--overwrite-marked-options option set with value : %s', options.overwriteMarkedOptions);
+                markedOptionsFilePath = options.overwriteMarkedOptions;
+            }
             deps.cliLogger.logHeader();
             const filePathList = deps.interpretGlob(globPattern);
             const loadedImplPkg = deps.loadImplPkg(implPkg);
@@ -23,7 +28,11 @@ function makeActionConvert(deps) {
                 throw new Error('Invalid package. Implementing IImplPkgBasic interface is mandatory.');
             }
             deps.cliLogger.logBeforeConfig();
-            const markedOptions = loadedImplPkg.markedOptions;
+            let markedOptions = loadedImplPkg.markedOptions;
+            if (options.overwriteMarkedOptions) {
+                const markedOptionsOverwrite = deps.loadMarkedOptions(markedOptionsFilePath);
+                markedOptions = Object.assign(markedOptions, { ...markedOptionsOverwrite });
+            }
             const targetDocumentFileExtension = loadedImplPkg.targetDocumentFileExtension;
             let targetDocumentPaths = null;
             if (types_1.implementIImplPkgReducer(loadedImplPkg)) {

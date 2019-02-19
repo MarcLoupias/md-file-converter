@@ -4,6 +4,7 @@ import { IDebugger } from 'debug';
 import { InterpretGlobFnType } from '../io/interpret-glob';
 import { CliLogger } from '../io/cli-logger';
 import { LoadImplPkgFnType } from '../io/load-impl-pkg';
+import { LoadMarkedOptionsFnType } from '../io/load-marked-options';
 
 import { MarkedOptions } from 'marked';
 import { IDocumentPaths, IMdDocument, ITargetDocument } from '../model/documents/interfaces';
@@ -24,6 +25,7 @@ export function makeActionConvert(deps: {
     path: any,
     cliLogger: CliLogger,
     loadImplPkg: LoadImplPkgFnType,
+    loadMarkedOptions: LoadMarkedOptionsFnType,
     unConfiguredReadMdDocument: UnConfiguredReadMdDocumentFnType,
     defaultImpl: {
         unConfiguredTokenizeMdDocument: UnConfiguredTokenizeMdDocumentFnType,
@@ -52,6 +54,12 @@ export function makeActionConvert(deps: {
                 filenameOption = options.filename;
             }
 
+            let markedOptionsFilePath: string = '';
+            if (options.overwriteMarkedOptions) {
+                deps.debug('--overwrite-marked-options option set with value : %s', options.overwriteMarkedOptions);
+                markedOptionsFilePath = options.overwriteMarkedOptions;
+            }
+
             deps.cliLogger.logHeader();
 
             /*
@@ -78,7 +86,13 @@ export function makeActionConvert(deps: {
 
             // marked conf
 
-            const markedOptions: MarkedOptions = loadedImplPkg.markedOptions;
+            let markedOptions: MarkedOptions = loadedImplPkg.markedOptions;
+
+            // is there markedOptions overwrite ?
+            if (options.overwriteMarkedOptions) {
+                const markedOptionsOverwrite: MarkedOptions = deps.loadMarkedOptions(markedOptionsFilePath);
+                markedOptions = Object.assign(markedOptions, { ...markedOptionsOverwrite });
+            }
 
             // files paths conf
 

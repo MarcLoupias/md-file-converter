@@ -89,10 +89,13 @@ Usage: convert [options] <implPkg> <globPattern>
 Convert the files grabbed by <globPattern> with the <implPkg> implementation package.
 
 Options:
-  -d, --dest <path>          Specify an absolute or relative directory destination <path> for the converted file(s). <path> MUST exist.
-  -f, --filename <filename>  When reducing to a single file, specity the filename <filename> (without extension which is defined in the impl pkg) for the converted file.
-  -h, --help                 output usage information
+  -d, --dest <path>                                       Specify an absolute or relative directory destination <path> for the converted file(s). <path> MUST exist.
+  -f, --filename <filename>                               When reducing to a single file, specity the filename <filename> (without extension which is defined in the impl pkg) for the converted file.
+  -o, --overwrite-marked-options <markedOptionsFilePath>  Marked options set in the <markedOptionsFilePath> file overwrite the default options defined in the implementation package in use.
+  -h, --help                                              output usage information
 ```
+
+### `--dest` option
 
 Notice that the source directory structure will not be created in the `dest` directory, all the files will be written in `dest` dir.
 
@@ -112,6 +115,67 @@ out-dir/file-aaa.md
 out-dir/file-bbb.md
 out-dir/file-ccc.md
 out-dir/file-ddd.md
+```
+
+### `--overwrite-marked-options` option
+
+The file must be a vanilla JavaScript file with a CommonJS module export.
+
+The file option must contains at least one valid property.
+
+Validity is checked against [`MarkedOptions`](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/marked/index.d.ts#L218) interface with a custom type guard.
+
+There is one exception, the `renderer` property is forbidden. Implements a package or use an existing one to deal with that property.
+
+A valid file could be :
+
+```javascript
+'use strict';
+
+module.exports = {
+    langPrefix: 'lang-',
+    tables: true
+};
+```
+
+This is not a bulk overwrite, the overwrite file is merged in the default setup.
+
+For example if the default conf in the implementation package is :
+
+```javascript
+'use strict';
+
+module.exports = {
+    langPrefix: '',
+    smartypants: true,
+    gfm: true,
+    breaks: true
+};
+```
+
+and the overwrite file is
+
+```javascript
+'use strict';
+
+module.exports = {
+    langPrefix: 'lang-',
+    tables: true
+};
+``` 
+
+The final marked options becomes :
+
+```javascript
+'use strict';
+
+module.exports = {
+    langPrefix: 'lang-',
+    smartypants: true,
+    gfm: true,
+    breaks: true,
+    tables: true
+};
 ```
 
 ## general algorithm

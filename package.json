@@ -42,7 +42,7 @@
     },
     "scripts": {
         "cz-commit": "git-cz",
-        "start": "DEV_MODE=true DEBUG=app:* node -r source-map-support/register dist/index.js convert '../tests/testing-impl-pkg/map-to-bbcode' 'tests/actual-files/news/test-news.md'",
+        "start": "DEV_MODE=true DEBUG=app:* node -r source-map-support/register dist/index.js convert -h",
         "lint": "./node_modules/.bin/eslint -c .eslintrc.json tests/*.spec.js",
         "lint-ts": "./node_modules/tslint/bin/tslint -t stylish -c tslint.json src/**/*.ts src/*.ts tests/testing-impl-pkg/**/*.ts",
         "compile": "npm run compile-src && npm run compile-tests-impl-pkg-invalid && npm run compile-tests-impl-pkg-map-to-bbcode && npm run compile-tests-impl-pkg-map-to-html && npm run compile-tests-impl-pkg-map-to-xml && npm run compile-tests-impl-pkg-map-reduce-to-xml && npm run compile-tests-impl-pkg-map-reduce-to-md",
