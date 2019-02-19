@@ -14,6 +14,7 @@ const markedRenderer: marked.Renderer = Object.assign(
 );
 const markedOptions: marked.MarkedOptions = {
     renderer: markedRenderer,
+    langPrefix: '',
     smartypants: true,
     gfm: true,
     breaks: true
