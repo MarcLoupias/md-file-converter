@@ -36,9 +36,9 @@ describe('command with option --overwrite-marked-options :: "md-file-converter c
     });
 
     context('command with option -o :: "md-file-converter convert \'./tests/testing-impl-pkg/map-to-html\' \'tests/actual-files/news/test-news.md\' -o"', function() {
-        it('should return "error: option `-o, --overwrite-marked-options <markedOptionsFilePath>\' argument missing" error', () => {
+        it('should return "error: option \'-o, --overwrite-marked-options <markedOptionsFilePath>\' argument missing" error', () => {
             const result = executeCliSync(['convert', '../tests/testing-impl-pkg/map-to-html', 'tests/actual-files/news/test-news.md', '-o'], false);
-            expect(result.stderr).to.include('error: option `-o, --overwrite-marked-options <markedOptionsFilePath>\' argument missing');
+            expect(result.stderr).to.include('error: option \'-o, --overwrite-marked-options <markedOptionsFilePath>\' argument missing');
         });
     });
 

@@ -36,9 +36,9 @@ describe('command with option --dest :: "md-file-converter convert <implPkg> <gl
     });
 
     context('command with option --dest :: "md-file-converter convert \'./tests/testing-impl-pkg/map-to-bbcode\' \'tests/actual-files/news/test-news.md\' --dest"', function() {
-        it('should return "error: option `-d, --dest <path>\' argument missing" error', () => {
+        it('should return "error: option \'-d, --dest <path>\' argument missing" error', () => {
             const result = executeCliSync(['convert', '../tests/testing-impl-pkg/map-to-bbcode', 'tests/actual-files/news/test-news.md', '--dest'], false);
-            expect(result.stderr).to.include('error: option `-d, --dest <path>\' argument missing');
+            expect(result.stderr).to.include('error: option \'-d, --dest <path>\' argument missing');
         });
     });
 });

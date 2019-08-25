@@ -72,33 +72,33 @@
         ]
     },
     "dependencies": {
-        "commander": "^2.20.0",
+        "commander": "^3.0.0",
         "debug": "^4.1.1",
         "front-matter": "^3.0.2",
         "glob": "^7.1.4",
-        "marked": "^0.6.2"
+        "marked": "^0.7.0"
     },
     "devDependencies": {
-        "@commitlint/cli": "^8.0.0",
-        "@commitlint/config-conventional": "^8.0.0",
-        "@commitlint/travis-cli": "^8.0.0",
+        "@commitlint/cli": "^8.1.0",
+        "@commitlint/config-conventional": "^8.1.0",
+        "@commitlint/travis-cli": "^8.1.0",
         "@types/debug": "^4.1.4",
         "@types/glob": "7.1.1",
         "@types/marked": "^0.6.5",
         "@types/node": "^10.14.8",
         "@types/package-json": "^5.0.0",
         "chai": "^4.2.0",
-        "commitizen": "^3.1.1",
-        "cz-conventional-changelog": "^2.1.0",
-        "eslint": "^5.16.0",
+        "commitizen": "^4.0.3",
+        "cz-conventional-changelog": "^3.0.2",
+        "eslint": "^6.2.2",
         "eslint-plugin-node": "^9.1.0",
         "eslint-plugin-security": "^1.4.0",
-        "husky": "^2.4.0",
-        "mocha": "^6.1.4",
-        "rimraf": "2.6.3",
-        "semantic-release": "^15.13.16",
-        "source-map-support": "^0.5.12",
-        "tslint": "^5.17.0",
-        "typescript": "^3.5.1"
+        "husky": "^3.0.4",
+        "mocha": "^6.2.0",
+        "rimraf": "^3.0.0",
+        "semantic-release": "^15.13.24",
+        "source-map-support": "^0.5.13",
+        "tslint": "^5.19.0",
+        "typescript": "^3.5.3"
     }
 }
