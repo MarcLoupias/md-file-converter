@@ -29,9 +29,9 @@ describe('command with option --filename :: "md-file-converter convert <implPkg>
     });
 
     context('command with option --filename :: "md-file-converter convert \'../tests/testing-impl-pkg/map-reduce-to-md\' \'tests/actual-files/faq/**/*.md\' --filename"', function() {
-        it('should return "error: option `-f, --filename <filename>\' argument missing" error', () => {
+        it('should return "error: option \'-f, --filename <filename>\' argument missing" error', () => {
             const result = executeCliSync(['convert', '../tests/testing-impl-pkg/map-reduce-to-md', 'tests/actual-files/faq/**/*.md', '--filename'], false);
-            expect(result.stderr).to.include('error: option `-f, --filename <filename>\' argument missing');
+            expect(result.stderr).to.include('error: option \'-f, --filename <filename>\' argument missing');
         });
     });
 });
