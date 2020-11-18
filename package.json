@@ -96,7 +96,7 @@
         "husky": "^3.0.4",
         "mocha": "^6.2.0",
         "rimraf": "^3.0.0",
-        "semantic-release": "^15.13.24",
+        "semantic-release": "^17.2.3",
         "source-map-support": "^0.5.13",
         "tslint": "^5.19.0",
         "typescript": "^3.5.3"
